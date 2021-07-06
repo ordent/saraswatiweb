@@ -1,0 +1,59 @@
+ <ul class="breadcrumb" data-admin-url="{admin_url}" data-title-link="{title_link}" data-sch-path="{sch_path}" data-perpage="{per_page}" data-pg="{pg}">
+            <li><a href="{admin_url}index/" title="Home"><span class="icon-home"></span></a></li>
+            <li><span>{title_head}</span></li>
+</ul>
+<div class="module"> 
+	<div class="module-head">
+		<h3>{title_head}</h3>
+	</div>
+	<div class="module-body">	     
+            <div class="controls margin15 left">
+				<div class="input-prepend">
+					<span class="add-on"><i class="menu icon-resize-vertical"></i></span><input type="text" value="{per_page}" class="span0 space5" maxlength="3" onchange="sendLimit(this.value)" onkeypress="validateLimit(event,this.value)">
+				</div>
+			</div>
+			<div class="pagination pagination-right">{paging}</div>
+			<div class="clear"></div>
+			<section id="flip-scroll">
+			<p>Total Data {jum_record}</p>
+            <form name="form_list" method="POST" id="form_list" action="{admin_url}{title_link}/delete">
+            <table class="table table-striped table-bordered table-condensed" style="{display_record}">
+				 <tr>
+                    <th width="1%" class="center">
+						<div class="checkbox check-primary">
+							<input type="checkbox" name="master" id="master" onclick="checkAll();">
+							<label for="master"></label>
+						</div>
+					</th>
+                    <th width="1%">No.</th>
+					<th width="1%" class="center">Edit</th>
+					<th width="10%">Name</th>
+                    <th width="10%" class="center">Active</th>
+                    <th width="10%"><i class="icon-calendar"></i> Created date</th>
+              	{list}
+					<tr class="record" id="record{id}">
+						<td width="1%" class="td-content center">
+							<div class="checkbox check-primary">
+								<input type="checkbox" name="choices" id="choices{id}" value="{id}"/>
+								<label for="choices{id}"></label>
+							</div>
+						</td>
+						<td class="td-content center">{no}</td>
+						<td class="td-content center"><a href="{link}" class="btn-edit"  rel="tooltip" title="Click to edit"><i class="icon-pencil"></i></a></td>
+						<td class="td-content">{user_id}</td>
+						<td class="td-content">{token}</td>
+						<td class="td-content">{created_date}</td>
+					</tr>
+                {/list}
+             </table>
+			<div class="controls margin15 left">
+				<div class="input-prepend">
+					<span class="add-on"><i class="menu icon-resize-vertical"></i></span><input type="text" value="{per_page}" class="span0 space5" maxlength="3" onchange="sendLimit(this.value)" onkeypress="validateLimit(event,this.value)">
+				</div>
+			</div>
+			<div class="pagination pagination-right">{paging}</div>
+			<div class="clear"></div>	 				 
+		    <input type="hidden" name="search_path" value="{sch_path}" id="sch_path"/>
+            </form>
+          </div>
+</div>

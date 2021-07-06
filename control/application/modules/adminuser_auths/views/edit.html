@@ -1,0 +1,68 @@
+<ul class="breadcrumb">
+            <li><a href="{admin_url}index/" title="Home"><i class="menu icon-home"></i></a></li>
+            <li><a href="{admin_url}{title_link}">{title_head}</a></li>
+            <li><span>{add_edit}</span></li>
+</ul>
+<div class="module"> 
+	<div class="module-head">
+		<h3>{add_edit}</h3>
+	</div>
+	<div class="module-body">
+            {notif}
+            <div class="alert {notif_class}">
+                <button data-dismiss="alert" class="close" type="button">&times;</button>
+                <strong>Notification</strong> {notif_title}
+          	</div>
+            {/notif}
+            <form name="form_list" method="POST" action="{admin_url}{title_link}/submit" enctype="multipart/form-data" class="form-horizontal row-fluid form-adminuser">
+				{list}
+				<div class="control-group">
+					<label for="basicinput" class="control-label">Email</label>
+					<div class="controls">
+						<input type="text" name="email" value="{email}" class="span8">
+					</div>
+				</div>
+				<div class="control-group">
+					<label for="basicinput" class="control-label">Full Name</label>
+					<div class="controls">
+						<input type="text" name="name" value="{name}" class="span8">
+					</div>
+				</div>
+				<div class="control-group">
+					<label for="basicinput" class="control-label">Password</label>
+					<div class="controls">
+						<input type="password" name="password" value="" class="span8">
+						<input type="hidden" name="password_old" value="{password}"/>
+					</div>
+				</div>
+				<div class="control-group">
+					<label for="basicinput" class="control-label">Level</label>
+					<div class="controls">
+						{ref2}
+					</div>
+				</div>
+				<div class="control-group">
+					<label for="basicinput" class="control-label">Active</label>
+					<div class="controls">
+						{ref3}
+					</div>
+				</div>
+				<div class="control-group">
+					<label for="basicinput" class="control-label">Created Date</label>
+					<div class="controls">
+						<input type="text" name="created_date" disabled='disabled' value="{created_date}" class="span8">
+						<input type="hidden" name="id" id="id" value="{id}"/>
+						<input type="hidden" name="table" id="table" value="adminuser_auths"/>
+					</div>
+				</div>
+				{/list}
+				<div class="control-group">
+					<div class="controls navigator">
+						 <a href="{admin_url}{title_link}/edit/0" style="{btn_plus}"><input type="button" class="btn btn-default btn-more" value="add more" id="more_btn"/></a>
+						 <input type="submit" class="btn btn-inverse btn-save" value="save" id="save_btn"/>
+						 <a href="{admin_url}{title_link}"><input type="button" class="btn btn-danger btn-cancel" value="cancel"/></a> 
+					</div>
+				</div> 
+	    </form>
+        </div>
+</div>

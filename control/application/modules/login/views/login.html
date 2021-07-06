@@ -1,0 +1,35 @@
+<div class="err" style="{err_display}">
+	<i class="menu-icon icon-exclamation-sign"></i> {notification}
+</div>
+<form class="form-vertical form-login" id="form-login" name="form-login" method="POST" action="{base_url}login/submit">
+	<div class="module-head">
+		<h3>Admin Control {site_name}</h3>
+	</div>
+	<div class="module-body">
+		<div class="control-group">
+			<div class="controls row-fluid">
+				<div class="input-group reg-email">
+				   <span class="input-group-addon"><i class="grey icon-envelope"></i></span>
+				   <input id="username" type="text" class="form-control span12" name="email" placeholder="Email" id="inputEmail">
+				</div>
+			</div>
+			
+		</div>
+		<div class="control-group">
+			<div class="controls row-fluid">
+				<div class="input-group reg-password">
+				   <span class="input-group-addon"><i class="grey icon-key"></i></span>
+				   <input id="password" type="password" class="form-control span12" name="password" placeholder="Password" id="inputPassword">
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="module-foot">
+		<div class="control-group">
+			<div class="controls clearfix navigator-login">
+				<button type="submit" class="btn btn-inverse pull-right btn-login" style="margin-right:5px"><i class="icon-lock"></i> Login</button>
+				Forgot password ? <br/> click <a href="{base_url}forgot" rel="facebox">here</a>
+			</div>
+		</div>
+	</div>
+</form>

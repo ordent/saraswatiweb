@@ -1,0 +1,50 @@
+<div class="container team" data-id="team">
+    <div class="row page-tagline">
+        <div class="col-md-12">
+            <h2 class="team-title">our team</h2>
+        </div>
+    </div>
+    <div class="row text-center">
+        <div class="col-md-8 col-md-offset-2">
+            <div id="teams-slider">
+                {team}
+                    {image_url}
+                {/team}
+            </div>
+            <div id="team-desc-slider">
+                 {team}
+                      <div class="team-content center">
+                        <h3>{name}</h3>
+                        <h4>{job} <a href="{link}"><i class="fa fa-linkedin-square"></i></a></h4>
+                        {description}
+                     </div>
+                 {/team}
+            </div>
+        </div>
+    </div>
+    <!-- <div class="swiper-container horizontal-pagination" data-autoplay="0" data-loop="0" data-speed="500" data-center="0" data-slides-per-view="1">
+        <div class="swiper-wrapper">
+            {team}
+            <div class="swiper-slide"> 
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-12 testimonials-image">
+                            {image_url}
+              
+                            <div class="cell-view team-content center">
+                                <h3>{name}</h3>
+                                <h4>{job} <a href="{link}"><i class="fa fa-linkedin-square"></i></a></h4>
+                                {description}
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {/team}
+        </div>
+        <div class="pagination"></div>
+        <div class="swiper-arrow left"><span aria-hidden="true" class="glyphicon glyphicon-chevron-left"></span></div>
+        <div class="swiper-arrow right"><span aria-hidden="true" class="glyphicon glyphicon-chevron-right"></span></div>
+    </div> -->
+</div>

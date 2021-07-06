@@ -1,0 +1,73 @@
+<ul class="breadcrumb">
+            <li><a href="{admin_url}index/" title="Home"><i class="menu icon-home"></i></a></li>
+            <li><a href="{admin_url}{title_link}">Admin User</a></li>
+            <li><span>Edit</span></li>
+</ul>
+<div class="module"> 
+	<div class="module-head">
+		<h3>Edit</h3>
+	</div>
+	<div class="module-body">
+            {notif}
+            <div class="alert {notif_class}">
+                <button data-dismiss="alert" class="close" type="button">&times;</button>
+                <strong>Notification</strong> {notif_title}
+          	</div>
+            {/notif}
+	    
+           
+            <form name="form_list" method="POST" action="{admin_url}{title_link}/submit_account" enctype="multipart/form-data" class="form-horizontal row-fluid form-profile">
+				 {list}
+				<div class="control-group">
+					<label for="basicinput" class="control-label">Level</label>
+					<div class="controls">
+						<p class="line-height-30">{level_title}</p>
+						<input type="hidden" name="publish" value="{publish}"/>
+						<input type="hidden" name="ref1" value="{ref1}"/>
+					</div>
+				</div>
+				<!-- <div class="control-group {is_brands}">
+					<label for="basicinput" class="control-label">Brands</label>
+					<div class="controls">
+						<p class="line-height-30">{brands_name}</p>
+						<input type="hidden" name="ref2" value="{ref2}"/>
+					</div>
+				</div> -->
+				<div class="control-group">
+					<label for="basicinput" class="control-label">Email</label>
+					<div class="controls">
+						<p class="line-height-30">{title}</p>
+					</div>
+				</div>
+				<div class="control-group">
+					<label for="basicinput" class="control-label">Password</label>
+					<div class="controls">
+						<input type="password" name="password" value="" class="span8">
+						<input type="hidden" name="password_old" value="{password}"/>
+					</div>
+				</div>
+				<hr/>
+				<div class="control-group">
+					<label for="basicinput" class="control-label">Full Name</label>
+					<div class="controls">
+						<input type="text" name="name" value="{name}" class="span8">
+					</div>
+				</div>
+				<div class="control-group">
+					<label for="basicinput" class="control-label">Created Date</label>
+					<div class="controls">
+					    <p class="line-height-30">{created_date}</p>
+						<input type="hidden" name="id" value="{id}"/>
+					</div>
+				</div>
+				 {/list}
+				<div class="control-group">
+					<div class="controls navigator">
+						 <input type="submit" class="btn btn-inverse btn-save" value="save" id="save_btn"/>
+						 <a href="{admin_url}"><input type="button" class="btn btn-danger btn-cancel" value="cancel"/></a>
+					</div>
+				</div> 
+	    </form>
+       
+	</div>
+</div>

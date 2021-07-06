@@ -1,0 +1,68 @@
+ <ul class="breadcrumb" data-admin-url="{admin_url}" data-title-link="{title_link}/edit/">
+            <li><a href="{admin_url}index/" title="Home"><i class="menu icon-home"></i></a></li>
+            <li><a href="{admin_url}{title_link}">{title_head}</a></li>
+            <li><span>{add_edit}</span></li>
+</ul>
+<div class="module"> 
+	<div class="module-head">
+		<h3>{add_edit}</h3>
+	</div>
+	<div class="module-body">
+            {notif}
+            <div class="alert {notif_class}">
+                <button data-dismiss="alert" class="close" type="button">&times;</button>
+                <strong>Notification</strong> {notif_title}
+          	</div>
+            {/notif}
+			
+            
+            <form name="form_list" method="POST" action="{admin_url}{title_link}/submit" enctype="multipart/form-data" class="form-horizontal row-fluid form-devi">
+				{list}
+				<div class="control-group">
+					<label for="basicinput" class="control-label">User Id</label>
+					<div class="controls">
+						<input type="text" name="user_id" value="{user_id}" class="span8">
+					</div>
+				</div>
+				<div class="control-group">
+					<label for="basicinput" class="control-label">Token</label>
+					<div class="controls">
+						<input type="text" name="token" value="{token}" class="span8">
+					</div>
+				</div>
+				<div class="control-group">
+					<label for="basicinput" class="control-label">Website Link</label>
+					<div class="controls">
+						<input type="text" name="link_website" value="{link_website}" class="span8">
+					</div>
+				</div>
+				<div class="control-group">
+					<label for="basicinput" class="control-label">Instagram Link</label>
+					<div class="controls">
+						<input type="text" name="link_instagram" value="{link_instagram}" class="span8">
+					</div>
+				</div>
+				<div class="control-group">
+					<label for="basicinput" class="control-label">Description</label>
+					<div class="controls span65">
+						<textarea id="description" name="description" rows="5" class="span8">{description}</textarea>
+					</div>
+				</div>
+				<div class="control-group">
+					<label for="basicinput" class="control-label">Created Date</label>
+					<div class="controls">
+						<input type="text" name="crete_date" disabled='disabled' value="{created_date}" class="span8">
+						<input type="hidden" name="id" id="id" value="{id}"/>
+					</div>
+				</div>
+				{/list}
+				<div class="control-group">
+					<div class="controls navigator">
+					 <input type="submit" class="btn btn-inverse btn-save" value="save" id="save_btn"/>
+					 <a href="{admin_url}{title_link}"><input type="button" class="btn btn-danger btn-cancel" value="cancel"/></a>
+					</div>
+				</div>
+	    </form>
+            
+        </div>
+</div>

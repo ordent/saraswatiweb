@@ -1,0 +1,60 @@
+<div class="block type-6 blog-background blog-detail">
+   <div class="headline white">
+        {highlight}
+        <div class="col-md-5 col-md-offset-2 content">
+            <h3 class="text-blue">{name}</h3>
+            <p class="text-grey">{preview}</p>
+            <a href="{link}" class="button-subscribe button-blog">ses more <i class="fa fa-long-arrow-right"></i></a>
+        </div>
+        <div class="col-md-5 no-padding image no-padding">
+            {image_url}
+        </div>
+        {/highlight}
+   </div>
+   <div class="container">
+        <div class="row page-tagline">
+            <div class="col-md-12 search">
+                <form method="post" name="form-blog" class="form-blog" action="{base_url}blog/search">
+                    <div class="col-md-5">
+                        <input type="text" name="sch1" class="blog-input" placeholder="Search by keywrods" value="{sch1_val}"/>
+                    </div>
+                    <div class="col-md-5">
+                        <select name="sch2" class="blog-select">
+                            <option value="0">Select Categories</option>
+                            {categories}
+                            <option value="{id}" {selected}>{name}</option>
+                            {/categories}
+                        </select>
+                    </div>
+                    <div class="col-md-2">
+                        <button class="button-search">search</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="row">                    
+            <div class="col-md-12">
+                <div class="slider touru">
+                    <div class="swiper-container">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+
+                                {list}
+                                <a href="{link}" class="touru-thumbs">
+                                    {image_url}
+                                    <h4>{name}</h4>
+                                   <p class="blog-preview">{preview}</p>
+                                   <div class="col-md-6 col-xs-6"><p class="blog-link">see more</p></div><div class="col-md-6 col-xs-6 right blog-link-icon"> <i class="fa fa-long-arrow-right blog-link"></i></div>
+                                </a>
+                                {/list}
+                               
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{contact}

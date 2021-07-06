@@ -1,0 +1,40 @@
+ <!-- FOOTER -->
+<footer class="container footer" data-id="contact">
+    <div class="row">
+        <div class="col-sm-6 content-entry footer-left">
+                <p>Get in touch with us!</p>
+                <form name="form-subscribe-footer" action="POST" id="form-subscribe" class="margin-subscribe">
+                    <input type="text" class="input-subscribe-footer footer-input" name="email-footer" placeholder="Type email here"/>
+                    <button class="button-subscribe-footer footer-input text-left" name="btn-subscribe-footer" id="button-subscribe">SUBSCRIBE &nbsp; &nbsp; <i class="fa fa-long-arrow-right float-right"></i></button>
+                </form>
+                <div class="sosmed">
+                    <span>Follow us</span>
+                    {socials}
+                    <a href="{link}"><i class="fa fa-{class}"></i></a>
+                    {/socials}
+                </div>
+        </div>
+        <div class="col-sm-5 content-entry footer-right">
+                <h3>Set up a coffee meeting with us!</h3>
+                {contact}
+                <div class="col-xs-2 col-md-1">
+                    <i class="fa fa-map-marker"></i>
+                </div>
+                <div class="col-xs-10 col-md-11">
+                    {address}
+                </div>
+                <div class="col-xs-2 col-md-1 footer-email">
+                    <i class="fa fa-envelope"></i>
+                </div>
+                <div class="col-xs-10 col-md-11 footer-email">
+                    <p>{email}</p>
+                </div>
+                {/contact}
+        </div>
+    </div>
+    <div class="row">
+        <div class="copy">
+            <span>Copyright©Saraswati {year}</span>
+        </div>
+    </div>
+</footer>    

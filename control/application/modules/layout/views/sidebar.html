@@ -1,0 +1,26 @@
+<div class="sidebar">           
+		<!--/.widget-nav-->
+		<ul class="widget widget-menu unstyled">
+			{list_menu}
+			<li>
+				<a {dropdown_toogle} href="{uri}"><i class="menu-icon icon-{icon}"></i>{cevron_toogle}{title} </a>
+				<ul {dropdown_menu}>
+					{list_menu1}
+					<li>
+						<a {dropdown_toogle} href="{uri}">{cevron_toogle}{title}</a>
+						<ul {dropdown_menu}>
+							{list_menu2}
+							<li><a {dropdown_toogle} href="{uri}">{cevron_toogle}{title}</a></li>
+							{/list_menu2}
+						</ul>
+					</li>
+					{/list_menu1}
+				</ul>
+			</li>
+			{/list_menu}
+			<li><a href="{admin_url}logout"><i class="menu-icon icon-sign-out"></i>Logout </a></li>
+		</ul>
+		<!--/.widget-nav-->
+</div>
+ <!--/.sidebar-->
+ 

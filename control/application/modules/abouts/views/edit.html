@@ -1,0 +1,73 @@
+ <ul class="breadcrumb" data-admin-url="{admin_url}" data-title-link="{title_link}/edit/">
+            <li><a href="{admin_url}index/" title="Home"><i class="menu icon-home"></i></a></li>
+            <li><a href="{admin_url}{title_link}">{title_head}</a></li>
+            <li><span>{add_edit}</span></li>
+</ul>
+<div class="module"> 
+	<div class="module-head">
+		<h3>{add_edit}</h3>
+	</div>
+	<div class="module-body">
+            {notif}
+            <div class="alert {notif_class}">
+                <button data-dismiss="alert" class="close" type="button">&times;</button>
+                <strong>Notification</strong> {notif_title}
+          	</div>
+            {/notif}
+			
+            
+            <form name="form_list" method="POST" action="{admin_url}{title_link}/submit" enctype="multipart/form-data" class="form-horizontal row-fluid form-abouts">
+				{list}
+				<div class="control-group">
+					<label for="basicinput" class="control-label">Title</label>
+					<div class="controls">
+						<input type="text" name="name" value="{name}" class="span8">
+					</div>
+				</div>
+				<div class="control-group">
+					<label for="basicinput" class="control-label">Preview</label>
+					<div class="controls">
+						<textarea id="preview" name="preview" rows="5" class="span8">{preview}</textarea>
+					</div>
+				</div>
+				<div class="control-group">
+					<label for="basicinput" class="control-label">Description</label>
+					<div class="controls span65">
+						<textarea id="description" name="description" rows="5" class="span8">{description}</textarea>
+					</div>
+				</div>
+				<div class="control-group">
+					<label for="basicinput" class="control-label">Background Image</label>
+					<div class="controls">
+						{file_image}<br>
+						<div class="customFile">
+                             <input type="file" id="file_image" name="file_image" placeholder="Upload Image"/>
+                             <label for="file_image"><i class="icon-camera"></i> Upload Image <br/><small>maximum allowed file size 5MB (jpg, png) best in 1920x1080 pixel</small></label>
+                        </div>
+					</div>
+				</div>
+				<!-- <div class="control-group">
+					<label for="basicinput" class="control-label">Active</label>
+					<div class="controls">
+						{ref2}
+					</div>
+				</div> -->
+				<div class="control-group">
+					<label for="basicinput" class="control-label">Created Date</label>
+					<div class="controls">
+						<input type="text" name="crete_date" disabled='disabled' value="{created_date}" class="span8">
+						<input type="hidden" name="id" value="{id}" id="id"/>
+					</div>
+				</div>
+				{/list}
+				<div class="control-group">
+					<div class="controls navigator">
+					 <a href="{admin_url}{title_link}/edit/0" style="{btn_plus}"><input type="button" class="btn btn-default btn-more" value="add more" id="more_btn"/></a>
+					 <input type="submit" class="btn btn-inverse btn-save" value="save" id="save_btn"/>
+					 <a href="{admin_url}{title_link}"><input type="button" class="btn btn-danger btn-cancel" value="cancel"/></a>
+					</div>
+				</div>
+	    </form>
+            
+        </div>
+</div>

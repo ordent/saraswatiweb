@@ -1,0 +1,45 @@
+*, *::after, *::before {
+    box-sizing: inherit;
+}
+.Dashboard::after {
+    content: none;
+}
+.Dashboard::after {
+    color: #777;
+    content: "Authorize to view demo...";
+    font-size: 1.1em;
+    font-weight: 300;
+    left: 1.5em;
+    line-height: 1.4em;
+    margin-top: -0.7em;
+    position: absolute;
+    right: 1.5em;
+    text-align: center;
+    top: 50%;
+    z-index: 2;
+}
+
+.Site.is-authorized .Dashboard > * {
+    opacity: 1;
+}
+
+.Titles {
+    font-weight: 300;
+    line-height: 1.2;
+    margin: 0 0 1.5em;
+}
+
+.Titles-main {
+    font-size: 1.4em;
+}
+
+.Titles-sub {
+    margin-top: 0.2em;
+    opacity: 0.6;
+}
+
+.ViewSelector, .ViewSelector2 {
+    display: flex;
+    margin: 0 0 -1em -1em;
+    width: calc(100% + 1em);
+}

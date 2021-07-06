@@ -1,0 +1,79 @@
+<ul class="breadcrumb">
+            <li><a href="{admin_url}index/" title="Home"><i class="menu icon-home"></i></a></li>
+            <li><a href="{admin_url}{title_link}">{title_head}</a></li>
+            <li><span>{add_edit}</span></li>
+</ul>
+<div class="module"> 
+	<div class="module-head">
+		<h3>{add_edit}</h3>
+	</div>
+	<div class="module-body">
+            {notif}
+            <div class="alert {notif_class}">
+                <button data-dismiss="alert" class="close" type="button">&times;</button>
+                <strong>Notification</strong> {notif_title}
+          	</div>
+            {/notif}
+       
+            <form name="form_list" method="POST" action="{admin_url}{title_link}/submit" enctype="multipart/form-data" class="form-horizontal row-fluid">
+            {list}
+				<div class="control-group">
+					<label for="basicinput" class="control-label">Meta Author</label>
+					<div class="controls">
+						<input type="text" name="meta_author" value="{meta_author}" class="span8">
+					</div>
+				</div>
+				<div class="control-group">
+					<label for="basicinput" class="control-label">Meta Title</label>
+					<div class="controls">
+						<input type="text" name="meta_title" value="{meta_title}" class="span8">
+					</div>
+				</div>
+				<div class="control-group">
+					<label for="basicinput" class="control-label">Meta Keyword</label>
+					<div class="controls">
+						<input type="text" name="meta_keyword" value="{meta_keyword}" class="span8">
+					</div>
+				</div>
+				<div class="control-group">
+					<label for="basicinput" class="control-label">Meta Description</label>
+					<div class="controls">
+						<textarea id="content" name="meta_description" rows="5" class="span8">{meta_description}</textarea>
+					</div>
+				</div>
+				<div class="control-group">
+					<div class="controls">
+						If you have created an email account from cPanel,<br/>
+						you can put it into the form below
+					</div>
+				</div>
+				<div class="control-group">
+					<label for="basicinput" class="control-label">Official Information Email</label>
+					<div class="controls">
+						<input type="text" name="email" value="{email}" class="span8">
+					</div>
+				</div>
+				<div class="control-group">
+					<label for="basicinput" class="control-label">Official Information Email Password</label>
+					<div class="controls">
+						<input type="text" name="password" value="{password}" class="span8">
+					</div>
+				</div>
+				<div class="control-group">
+					<label for="basicinput" class="control-label">Created Date</label>
+					<div class="controls">
+						<input type="text" name="created_date" disabled='disabled' value="{created_date}" class="span8">
+						<input type="hidden" name="id" value="{id}"/>
+					</div>
+				</div>
+				{/list} 
+				<div class="control-group">
+					<div class="controls">
+						<input type="button" class="btn btn-inverse" value="save" id="save_btn" onclick="document.form_list.submit();"/>
+						<a href="{admin_url}"><input type="button" class="btn btn-danger" value="cancel"/></a>
+					</div>
+				</div>   
+	    </form>
+            
+        </div>
+</div>

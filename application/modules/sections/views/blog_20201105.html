@@ -1,0 +1,36 @@
+<div class="block type-6 blog-background scroll-to-block blog" data-id="blog">
+  <div class="container">
+      <div class="row page-tagline">
+          <div class="col-md-6 col-md-offset-3">
+              <a href="{base_url}blog"><h2 class="blog-title">blog / news</h2></a>
+          </div>
+      </div>
+      <div class="row">                    
+          <div class="col-md-12">
+              <div class="slider touru">
+                  <div class="swiper-container" data-autoplay="0" data-loop="0" data-speed="500" data-center="0" data-slides-per-view="1" data-md-slides="5">
+                    <div class="swiper-arrow left arrow-left"><span aria-hidden="true" class="fa fa-chevron-left"></span></div>
+                      <div class="swiper-arrow right arrow-right"><span aria-hidden="true" class="fa fa-chevron-right"></span></div>
+                      <div class="swiper-wrapper">
+                          {blog_list}
+                          <div class="swiper-slide">
+
+                              {blog}
+                              <a href="{link}" class="touru-thumbs">
+                                  {image_url}
+                                  <h4>{name}</h4>
+                                  <p class="blog-preview">{preview}</p>
+                                  <div class="col-md-6 col-xs-6"><p class="blog-link">see more</p></div><div class="col-md-6 col-xs-6 right blog-link-icon"> <i class="fa fa-long-arrow-right blog-link"></i></div>
+                              </a>
+                              {/blog}
+                          
+                          </div>
+                          {/blog_list}
+                      </div>
+                      <div class="pagination"></div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
