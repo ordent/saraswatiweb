@@ -6,7 +6,8 @@ if ( ! function_exists('asset_url'))
 	{
 		$protocol = stripos($_SERVER['SERVER_PROTOCOL'],'https') === true ? 'https://' : 'http://';
 		$root = explode('/',$_SERVER['PHP_SELF']);
-		return $protocol.$_SERVER['HTTP_HOST'].'/saraswatiweb'.'/uploads/';
+		// return $protocol.$_SERVER['HTTP_HOST'].'/saraswatiweb'.'/uploads/';
+		return $protocol.$_SERVER['HTTP_HOST'].'/uploads/';
 	}
 }
 
@@ -16,7 +17,9 @@ if ( ! function_exists('web_url'))
 	{
 		$protocol = stripos($_SERVER['SERVER_PROTOCOL'],'https') === true ? 'https://' : 'http://';
 		$root = explode('/',$_SERVER['PHP_SELF']);
-		return $protocol.$_SERVER['HTTP_HOST'].'/saraswatiweb'.'/'.$root[1];
+		// return $protocol.$_SERVER['HTTP_HOST'].'/saraswatiweb'.'/'.$root[1];
+		return $protocol.$_SERVER['HTTP_HOST'].'/'.$root[1];
+
 	}
 }
 

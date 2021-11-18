@@ -36,6 +36,8 @@
  * @filesource
  */
 
+ob_start();
+
 /*
  *---------------------------------------------------------------
  * APPLICATION ENVIRONMENT
@@ -316,4 +318,6 @@ switch (ENVIRONMENT)
  *
  * And away we go...
  */
+echo BASEPATH.'core/CodeIgniter.php';
+
 require_once BASEPATH.'core/CodeIgniter.php';

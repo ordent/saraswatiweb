@@ -75,9 +75,9 @@ $query_builder = TRUE;
 
 $db['default'] = array(
 	'dsn'	=> '',
-	'hostname' => 'localhost',
-	'username' => 'saraswatiweb',
-	'password' => '1qaZXsw2!!$',
+	'hostname' => 'database',
+	'username' => 'root',
+	'password' => '1234567890',
 	'database' => 'saraswatiweb',
 	'dbdriver' => 'mysqli',
 	'dbprefix' => 'tbl_',
