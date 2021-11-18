@@ -75,9 +75,9 @@ $query_builder = TRUE;
 
 $db['default'] = array(
 	'dsn'	=> '',
-	'hostname' => 'database',
-	'username' => 'root',
-	'password' => '1234567890',
+	'hostname' => 'ordent-mysql-shinjuku.cmphg8zikgos.ap-southeast-1.rds.amazonaws.com',
+	'username' => 'ordent',
+	'password' => 'ordent1234!',
 	'database' => 'saraswatiweb',
 	'dbdriver' => 'mysqli',
 	'dbprefix' => 'tbl_',
